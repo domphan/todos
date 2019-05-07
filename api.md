@@ -9,9 +9,9 @@
 **Request Params**: 
 ```json
 {
-  group: "Purchases",
-  task: "Buy wood",
-  dependencyIds: [1]
+  "group": "Purchases",
+  "task": "Buy wood",
+  "dependencyIds": [1]
 }
 ```
 *group*: (required) name of the task group as a string
@@ -103,7 +103,7 @@ Occurs if a task of id, 'taskid' doesn't exist
 **Request Params**: 
 ```json
 {
-  completedAt: 1557248214
+  "completedAt": 1557248214
 }
 ```
 *group*: (optional) name of the task group as a string
