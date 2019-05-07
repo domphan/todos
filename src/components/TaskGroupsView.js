@@ -3,6 +3,7 @@ import { TaskItem } from '.';
 
 class TaskGroupsView extends Component {
 
+  // Renders task items for each task in the group
   renderItems = () => {
     const { groupData } = this.props;
     const tasks = groupData.tasks.map((task) => {
@@ -17,7 +18,6 @@ class TaskGroupsView extends Component {
     })
     return tasks;
   }
-
   render() {
     return (
       <div id='task-list-container'>

@@ -14,6 +14,7 @@ class TaskGroupsListItem extends Component {
     );
   }
 
+  // Returns the amount of tasks completed for the task group
   getAmountCompleted = () => {
     const { groupData, completed } = this.props;
     let amountCompleted = 0;
@@ -21,7 +22,7 @@ class TaskGroupsListItem extends Component {
       if (completed[task.id]) {
         amountCompleted++;
       }
-    })
+    });
     return amountCompleted;
   }
 }

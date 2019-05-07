@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 class TaskItem extends Component {
 
+  /**
+   * Will render an <li> with the correct status and icon
+   */
   renderListElement = () => {
     const { task, completed } = this.props;
     this.status = 'undetermined';
@@ -17,19 +20,17 @@ class TaskItem extends Component {
         this.status = 'incomplete'
       }
     }
-
     return (
       <li className='tasks'>
         <div className='task-container'>
           <span id={`${this.status}-icon`}></span>
           <span className={this.status}>{this.props.task.task}</span>
         </div>
-
       </li>
     );
   }
 
-
+  // onClick event listener will change state in parent element to modify completed task list
   render() {
     return (
       <div

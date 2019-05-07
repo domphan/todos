@@ -23,14 +23,15 @@ class TaskGroupsList extends Component {
       .catch(err => this.setState({ error: true, errorMsg: err.message }));
     if (response) {
       const data = await response.json();
-      await this.groupData(data);
-      this.setState({ loading: false, loadSucess: true })
+      await this.groupDataByTaskGroup(data);
+      this.setState({ loading: false, loadSucess: true });
     }
   }
 
-  groupData = (data) => {
+  groupDataByTaskGroup = (data) => {
     const formattedData = {};
     data.forEach((task) => {
+      // initialization
       if (!formattedData[task.group]) {
         formattedData[task.group] = {
           tasks: [],
@@ -96,14 +97,17 @@ class TaskGroupsList extends Component {
     )
   }
 
+  // When clicking onto a task group
   handleGroupClick = (event, groupName) => {
     this.setState({ currentGroup: groupName });
   }
 
+  // When clicking on "ALL GROUPS"
   handleAllGroupsClick = () => {
     this.setState({ currentGroup: undefined });
   }
 
+  // When checking off an item from the list
   handleCheckOff = (event, taskId, success) => {
     if (success) {
       this.setState(prevState => ({
