@@ -1,0 +1,88 @@
+html, body {
+  height: 100%;
+}
+
+hr {
+    width: 100%;
+}
+
+.groups {
+    margin-left: 1rem;
+    padding-left: 2rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#task-list-container > #task-list {
+    list-style-type: none;
+    list-style-image: none;
+    padding: 0;
+}
+
+.task-groups {
+    list-style-image: url('/group.svg');
+    list-style-position: outside;
+    padding: 0;
+}
+
+.tasks {
+    margin: 20px;
+}
+
+.locked {
+    color: grey;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.incomplete {
+    color: black;
+}
+
+#locked-icon {
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+    background-image:url('/locked.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#completed-icon {
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+    background-image:url('/completed.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#incomplete-icon {
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+    background-image:url('/incomplete.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
